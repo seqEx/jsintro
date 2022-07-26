@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>GUESS THE NUMBER</h2>
+<p id="random"></p>
+<p id="demo"></p>
+<p><h2>WEBSITE URL</h2></p>
+<p id="i"></p>
+<p><h2>DATATYPE</h2></p>
+<p id="type"></p>
+<p><h2>AREA OF CIRCLE</h2></p>
+<p id="circle"></p>
+
+<script>
+const num =Math.floor(Math.random() * 10) + 1;
+document.getElementById("random").innerHTML ="<b>the random number is </b>" + num;
+let myinput = prompt('Enter your guess number ');
+document.getElementById("demo").innerHTML = "<b>you entered </b>" +myinput;
+  if(myinput == num)
+   window.alert("Matched");
+  else
+   window.alert("Not Matched");
+    
+document.getElementById("i").innerHTML ="The full URL of this page is:<br>" + window.location.href;
+
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("type").innerHTML ="type of 1st var: "+ 
+typeof 0 + "<br>"+
+"type of 2nd var: "+ typeof "John" + "<br>"+
+"type of 3rd var: "+ typeof cars + "<br>"
+
+const pi=3.14;
+let myradius = prompt('Enter the radius ');
+var area=pi*myradius*myradius;
+document.getElementById("circle").innerHTML ="<b>the area of circle is </b>" + area;
+
+</script>
+
+</body>
+</html>
